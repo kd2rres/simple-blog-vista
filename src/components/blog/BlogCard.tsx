@@ -2,6 +2,7 @@
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Link } from 'react-router-dom';
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 interface BlogCardProps {
   id: string;
@@ -11,6 +12,7 @@ interface BlogCardProps {
   category: string;
   readTime: string;
   featured?: boolean;
+  thumbnailUrl: string;
 }
 
 const BlogCard = ({
@@ -21,10 +23,18 @@ const BlogCard = ({
   category,
   readTime,
   featured = false,
+  thumbnailUrl,
 }: BlogCardProps) => {
   return (
     <Card className={`overflow-hidden border-0 shadow-none ${featured ? 'md:grid md:grid-cols-2 gap-6 items-center' : ''}`}>
-      <div className={`h-48 ${featured ? 'md:h-full' : ''} bg-gray-200 relative`}>
+      <div className={`h-48 ${featured ? 'md:h-full' : ''} relative overflow-hidden rounded-lg`}>
+        <AspectRatio ratio={16 / 9}>
+          <img 
+            src={thumbnailUrl} 
+            alt={title}
+            className="object-cover w-full h-full transition-transform duration-300 hover:scale-105"
+          />
+        </AspectRatio>
         <div className="absolute inset-0 bg-gradient-to-t from-gray-900/20 to-transparent"></div>
       </div>
       <CardContent className={`p-6 ${featured ? 'md:pr-0' : ''}`}>

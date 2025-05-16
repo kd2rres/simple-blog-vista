@@ -11,7 +11,8 @@ const FeaturedPosts = () => {
       date: 'May 15, 2023',
       category: 'Design',
       readTime: '5 min read',
-      featured: true
+      featured: true,
+      thumbnailUrl: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=1200&h=675&q=80'
     },
   ];
 
@@ -29,6 +30,7 @@ const FeaturedPosts = () => {
             category={post.category}
             readTime={post.readTime}
             featured={post.featured}
+            thumbnailUrl={post.thumbnailUrl}
           />
         ))}
       </div>

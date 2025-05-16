@@ -2,6 +2,7 @@
 import { useParams } from 'react-router-dom';
 import { Badge } from '@/components/ui/badge';
 import Newsletter from '@/components/blog/Newsletter';
+import { AspectRatio } from '@/components/ui/aspect-ratio';
 
 const BlogPost = () => {
   const { id } = useParams();
@@ -10,6 +11,7 @@ const BlogPost = () => {
   const post = {
     id: '1',
     title: 'Designing for Simplicity: How Less Became More',
+    thumbnailUrl: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=2000&q=80',
     content: `
       <p class="lead">
         Minimalism isn't just an aesthetic choice—it's a framework for creating more impactful digital experiences by focusing on what truly matters.
@@ -126,7 +128,15 @@ const BlogPost = () => {
             </div>
           </div>
 
-          <div className="aspect-[16/9] bg-gray-200 rounded-lg mb-10"></div>
+          <div className="rounded-lg mb-10 overflow-hidden">
+            <AspectRatio ratio={16 / 9}>
+              <img 
+                src={post.thumbnailUrl} 
+                alt={post.title}
+                className="object-cover w-full h-full"
+              />
+            </AspectRatio>
+          </div>
           
           <div className="prose max-w-none" dangerouslySetInnerHTML={{ __html: post.content }}></div>
           
@@ -151,13 +161,31 @@ const BlogPost = () => {
           <h2 className="text-2xl font-bold mb-8 text-center">Keep Reading</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white p-6 rounded-lg">
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <div className="mb-4 overflow-hidden rounded-md">
+                <AspectRatio ratio={16 / 9}>
+                  <img 
+                    src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=800&h=450&q=80"
+                    alt="The Evolution of Web Typography" 
+                    className="object-cover w-full h-full"
+                  />
+                </AspectRatio>
+              </div>
               <Badge variant="outline" className="mb-2">Design</Badge>
               <h3 className="text-xl font-bold mb-2">The Evolution of Web Typography</h3>
               <p className="text-muted-foreground mb-4">From system fonts to variable fonts: exploring how web typography has changed the digital reading experience.</p>
               <a href="#" className="text-primary font-medium hover:underline">Read Article</a>
             </div>
-            <div className="bg-white p-6 rounded-lg">
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <div className="mb-4 overflow-hidden rounded-md">
+                <AspectRatio ratio={16 / 9}>
+                  <img 
+                    src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&h=450&q=80"
+                    alt="Building Sustainable Digital Products" 
+                    className="object-cover w-full h-full"
+                  />
+                </AspectRatio>
+              </div>
               <Badge variant="outline" className="mb-2">Product</Badge>
               <h3 className="text-xl font-bold mb-2">Building Sustainable Digital Products</h3>
               <p className="text-muted-foreground mb-4">How to approach product design with sustainability in mind, reducing digital waste and environmental impact.</p>
