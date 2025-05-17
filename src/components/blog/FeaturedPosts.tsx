@@ -2,17 +2,17 @@
 import BlogCard from './BlogCard';
 
 const FeaturedPosts = () => {
-  // Mock data
+  // Updated featured post data from the requested blog
   const featuredPosts = [
     {
       id: '1',
-      title: 'Designing for Simplicity: How Less Became More',
-      excerpt: 'An exploration of minimalism in digital design and how stripping away the unnecessary creates more impactful user experiences.',
+      title: 'SEO Agency Showdown: How to Choose the Right Partner for Your Business',
+      excerpt: 'Finding the perfect SEO agency for your business can be challenging. This comprehensive guide walks you through the essential factors to consider when selecting an SEO partner that will deliver real results.',
       date: 'May 15, 2023',
-      category: 'Design',
-      readTime: '5 min read',
+      category: 'Digital Marketing',
+      readTime: '8 min read',
       featured: true,
-      thumbnailUrl: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=1200&h=675&q=80'
+      thumbnailUrl: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&h=675&q=80'
     },
   ];
 
