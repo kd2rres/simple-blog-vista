@@ -14,6 +14,7 @@ interface BlogCardProps {
   readTime: string;
   featured?: boolean;
   thumbnailUrl: string;
+  externalUrl?: string;
 }
 
 const BlogCard = ({
@@ -25,7 +26,28 @@ const BlogCard = ({
   readTime,
   featured = false,
   thumbnailUrl,
+  externalUrl,
 }: BlogCardProps) => {
+  const TitleLink = () => {
+    if (externalUrl) {
+      return (
+        <a href={externalUrl} target="_blank" rel="noopener noreferrer">
+          <h3 className={`${featured ? 'text-2xl md:text-3xl' : 'text-xl'} font-bold mb-2 hover:text-gray-700 transition-colors`}>
+            {title}
+          </h3>
+        </a>
+      );
+    }
+    
+    return (
+      <Link to={`/blog/${id}`}>
+        <h3 className={`${featured ? 'text-2xl md:text-3xl' : 'text-xl'} font-bold mb-2 hover:text-gray-700 transition-colors`}>
+          {title}
+        </h3>
+      </Link>
+    );
+  };
+
   return (
     <Card className={`overflow-hidden border-0 shadow-none ${featured ? 'md:grid md:grid-cols-2 gap-6 items-center' : ''}`}>
       <div className={`h-48 ${featured ? 'md:h-full' : ''} relative overflow-hidden rounded-lg`}>
@@ -43,11 +65,7 @@ const BlogCard = ({
           <Badge variant="outline">{category}</Badge>
           <span className="text-xs text-muted-foreground">{readTime}</span>
         </div>
-        <Link to={`/blog/${id}`}>
-          <h3 className={`${featured ? 'text-2xl md:text-3xl' : 'text-xl'} font-bold mb-2 hover:text-gray-700 transition-colors`}>
-            {title}
-          </h3>
-        </Link>
+        <TitleLink />
         <p className="text-muted-foreground mb-4">
           {excerpt}
         </p>

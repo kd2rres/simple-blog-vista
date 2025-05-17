@@ -2,7 +2,7 @@
 import BlogCard from './BlogCard';
 
 const FeaturedPosts = () => {
-  // Updated featured post data with more relevant thumbnail
+  // Updated featured post data with more relevant thumbnail and external URL
   const featuredPosts = [
     {
       id: '1',
@@ -12,7 +12,8 @@ const FeaturedPosts = () => {
       category: 'Digital Marketing',
       readTime: '8 min read',
       featured: true,
-      thumbnailUrl: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&h=675&q=80' // Business meeting/SEO strategy image
+      thumbnailUrl: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&h=675&q=80', // Business meeting/SEO strategy image
+      externalUrl: 'https://blog-seo-agency-showdown.vercel.app/'
     },
   ];
 
@@ -31,6 +32,7 @@ const FeaturedPosts = () => {
             readTime={post.readTime}
             featured={post.featured}
             thumbnailUrl={post.thumbnailUrl}
+            externalUrl={post.externalUrl}
           />
         ))}
       </div>

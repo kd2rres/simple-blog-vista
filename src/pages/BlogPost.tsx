@@ -8,11 +8,12 @@ import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 const BlogPost = () => {
   const { id } = useParams();
   
-  // Mock data for the SEO Agency Showdown article with updated thumbnail
+  // Mock data for the SEO Agency Showdown article with updated thumbnail and external URL
   const post = {
     id: '1',
     title: 'SEO Agency Showdown: How to Choose the Right Partner for Your Business',
     thumbnailUrl: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=2000&q=80', // Updated with business/SEO meeting image
+    externalUrl: 'https://blog-seo-agency-showdown.vercel.app/',
     content: `
       <p class="lead">
         In today's competitive digital landscape, choosing the right SEO agency can be the difference between online obscurity and market dominance. With countless firms promising first-page rankings and exponential growth, how do you separate the true experts from the snake oil salesmen?
@@ -187,6 +188,12 @@ const BlogPost = () => {
 
   if (!post) {
     return <div>Post not found</div>;
+  }
+
+  // Redirect to external URL if available
+  if (post.externalUrl) {
+    window.location.href = post.externalUrl;
+    return null;
   }
 
   return (
