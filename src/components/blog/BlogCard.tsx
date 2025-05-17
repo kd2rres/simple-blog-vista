@@ -3,6 +3,7 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Link } from 'react-router-dom';
 import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 interface BlogCardProps {
   id: string;
@@ -52,7 +53,10 @@ const BlogCard = ({
         </p>
         <CardFooter className="p-0">
           <div className="flex items-center">
-            <div className="w-8 h-8 rounded-full bg-gray-200"></div>
+            <Avatar className="w-8 h-8">
+              <AvatarImage src="/lovable-uploads/45bb316b-c563-4e27-888b-509d2b5d6fd2.png" alt="Kim Dave Torres" />
+              <AvatarFallback>KT</AvatarFallback>
+            </Avatar>
             <div className="ml-2">
               <p className="text-sm">Kim Dave Torres</p>
               <p className="text-xs text-muted-foreground">{date}</p>

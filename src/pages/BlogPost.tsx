@@ -1,7 +1,9 @@
+
 import { useParams } from 'react-router-dom';
 import { Badge } from '@/components/ui/badge';
 import Newsletter from '@/components/blog/Newsletter';
-import { AspectRatio } from '@/components/ui/aspect-ratio';
+import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 const BlogPost = () => {
   const { id } = useParams();
@@ -178,7 +180,7 @@ const BlogPost = () => {
     readTime: '8 min read',
     author: {
       name: 'Kim Dave Torres',
-      avatar: '/placeholder.svg',
+      avatar: '/lovable-uploads/45bb316b-c563-4e27-888b-509d2b5d6fd2.png',
       bio: 'Digital marketing specialist with 10+ years of experience helping businesses improve their online presence.'
     }
   };
@@ -195,7 +197,10 @@ const BlogPost = () => {
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">{post.title}</h1>
           
           <div className="flex items-center space-x-4 mb-8">
-            <div className="w-12 h-12 rounded-full bg-gray-200"></div>
+            <Avatar className="w-12 h-12">
+              <AvatarImage src={post.author.avatar} alt={post.author.name} />
+              <AvatarFallback>KT</AvatarFallback>
+            </Avatar>
             <div>
               <p className="font-medium">{post.author.name}</p>
               <div className="text-sm text-muted-foreground">
@@ -220,7 +225,10 @@ const BlogPost = () => {
           
           <div className="border-t border-border mt-12 pt-8">
             <div className="flex items-center space-x-4">
-              <div className="w-16 h-16 rounded-full bg-gray-200"></div>
+              <Avatar className="w-16 h-16">
+                <AvatarImage src={post.author.avatar} alt={post.author.name} />
+                <AvatarFallback>KT</AvatarFallback>
+              </Avatar>
               <div>
                 <p className="font-medium text-lg">{post.author.name}</p>
                 <p className="text-muted-foreground mb-2">{post.author.bio}</p>
@@ -255,7 +263,10 @@ const BlogPost = () => {
               <div className="flex items-center justify-between">
                 <a href="#" className="text-primary font-medium hover:underline">Read Article</a>
                 <div className="flex items-center">
-                  <div className="w-6 h-6 rounded-full bg-gray-200"></div>
+                  <Avatar className="w-6 h-6">
+                    <AvatarImage src="/lovable-uploads/45bb316b-c563-4e27-888b-509d2b5d6fd2.png" alt="Kim Dave Torres" />
+                    <AvatarFallback>KT</AvatarFallback>
+                  </Avatar>
                   <span className="ml-2 text-xs text-muted-foreground">Kim Dave Torres</span>
                 </div>
               </div>
@@ -276,7 +287,10 @@ const BlogPost = () => {
               <div className="flex items-center justify-between">
                 <a href="#" className="text-primary font-medium hover:underline">Read Article</a>
                 <div className="flex items-center">
-                  <div className="w-6 h-6 rounded-full bg-gray-200"></div>
+                  <Avatar className="w-6 h-6">
+                    <AvatarImage src="/lovable-uploads/45bb316b-c563-4e27-888b-509d2b5d6fd2.png" alt="Kim Dave Torres" />
+                    <AvatarFallback>KT</AvatarFallback>
+                  </Avatar>
                   <span className="ml-2 text-xs text-muted-foreground">Kim Dave Torres</span>
                 </div>
               </div>
