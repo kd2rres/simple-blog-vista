@@ -7,11 +7,11 @@ import { AspectRatio } from '@/components/ui/aspect-ratio';
 const BlogPost = () => {
   const { id } = useParams();
   
-  // Updated mock data for the SEO Agency Showdown article
+  // Mock data for the SEO Agency Showdown article with updated thumbnail
   const post = {
     id: '1',
     title: 'SEO Agency Showdown: How to Choose the Right Partner for Your Business',
-    thumbnailUrl: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=2000&q=80',
+    thumbnailUrl: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=2000&q=80', // Updated with business/SEO meeting image
     content: `
       <p class="lead">
         In today's competitive digital landscape, choosing the right SEO agency can be the difference between online obscurity and market dominance. With countless firms promising first-page rankings and exponential growth, how do you separate the true experts from the snake oil salesmen?
@@ -244,7 +244,7 @@ const BlogPost = () => {
               <div className="mb-4 overflow-hidden rounded-md">
                 <AspectRatio ratio={16 / 9}>
                   <img 
-                    src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=800&h=450&q=80"
+                    src="https://images.unsplash.com/photo-1567443024551-f3e3cc2be870?auto=format&fit=crop&w=800&h=450&q=80"
                     alt="The Evolution of Web Typography" 
                     className="object-cover w-full h-full"
                   />
@@ -259,7 +259,7 @@ const BlogPost = () => {
               <div className="mb-4 overflow-hidden rounded-md">
                 <AspectRatio ratio={16 / 9}>
                   <img 
-                    src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&h=450&q=80"
+                    src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=800&h=450&q=80"
                     alt="Building Sustainable Digital Products" 
                     className="object-cover w-full h-full"
                   />

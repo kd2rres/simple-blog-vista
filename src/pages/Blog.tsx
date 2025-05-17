@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
@@ -6,16 +5,16 @@ import BlogCard from '@/components/blog/BlogCard';
 import Newsletter from '@/components/blog/Newsletter';
 
 const Blog = () => {
-  // Mock data
+  // Mock data with more relevant thumbnails
   const allPosts = [
     {
       id: '1',
-      title: 'Designing for Simplicity: How Less Became More',
-      excerpt: 'An exploration of minimalism in digital design and how stripping away the unnecessary creates more impactful user experiences.',
+      title: 'SEO Agency Showdown: How to Choose the Right Partner for Your Business',
+      excerpt: 'Finding the perfect SEO agency for your business can be challenging. This comprehensive guide walks you through the essential factors to consider when selecting an SEO partner that will deliver real results.',
       date: 'May 15, 2023',
-      category: 'Design',
-      readTime: '5 min read',
-      thumbnailUrl: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=1200&h=675&q=80'
+      category: 'Digital Marketing',
+      readTime: '8 min read',
+      thumbnailUrl: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&h=675&q=80' // Business meeting/SEO strategy image
     },
     {
       id: '2',
@@ -24,7 +23,7 @@ const Blog = () => {
       date: 'Apr 28, 2023',
       category: 'Design',
       readTime: '4 min read',
-      thumbnailUrl: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=1200&h=675&q=80'
+      thumbnailUrl: 'https://images.unsplash.com/photo-1567443024551-f3e3cc2be870?auto=format&fit=crop&w=1200&h=675&q=80' // Typography-related image
     },
     {
       id: '3',
@@ -33,7 +32,7 @@ const Blog = () => {
       date: 'Apr 12, 2023',
       category: 'Product',
       readTime: '6 min read',
-      thumbnailUrl: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&h=675&q=80'
+      thumbnailUrl: 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=1200&h=675&q=80' // Sustainable product image
     },
     {
       id: '4',
@@ -42,7 +41,7 @@ const Blog = () => {
       date: 'Mar 30, 2023',
       category: 'Design',
       readTime: '3 min read',
-      thumbnailUrl: 'https://images.unsplash.com/photo-1649972904349-6e44c42644a7?auto=format&fit=crop&w=1200&h=675&q=80'
+      thumbnailUrl: 'https://images.unsplash.com/photo-1576502200916-3808e07386a5?auto=format&fit=crop&w=1200&h=675&q=80' // Animation/motion design image
     },
     {
       id: '5',
@@ -51,7 +50,7 @@ const Blog = () => {
       date: 'Mar 15, 2023',
       category: 'Design',
       readTime: '5 min read',
-      thumbnailUrl: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=1200&h=675&q=80'
+      thumbnailUrl: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&h=675&q=80' // Asymmetrical design image
     },
     {
       id: '6',
@@ -60,7 +59,7 @@ const Blog = () => {
       date: 'Feb 27, 2023',
       category: 'Psychology',
       readTime: '7 min read',
-      thumbnailUrl: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=1200&h=675&q=80'
+      thumbnailUrl: 'https://images.unsplash.com/photo-1525909002-1b05e0c869d8?auto=format&fit=crop&w=1200&h=675&q=80' // Color psychology image
     },
     {
       id: '7',
@@ -69,7 +68,7 @@ const Blog = () => {
       date: 'Feb 15, 2023',
       category: 'Product',
       readTime: '6 min read',
-      thumbnailUrl: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=1200&h=675&q=80'
+      thumbnailUrl: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1200&h=675&q=80' // Ethical design image
     },
     {
       id: '8',
@@ -78,7 +77,7 @@ const Blog = () => {
       date: 'Jan 29, 2023',
       category: 'Writing',
       readTime: '4 min read',
-      thumbnailUrl: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&h=675&q=80'
+      thumbnailUrl: 'https://images.unsplash.com/photo-1506784365847-bbad939e9335?auto=format&fit=crop&w=1200&h=675&q=80' // Storytelling image
     },
   ];
 

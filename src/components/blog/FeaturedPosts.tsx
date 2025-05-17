@@ -2,7 +2,7 @@
 import BlogCard from './BlogCard';
 
 const FeaturedPosts = () => {
-  // Updated featured post data from the requested blog
+  // Updated featured post data with more relevant thumbnail
   const featuredPosts = [
     {
       id: '1',
@@ -12,7 +12,7 @@ const FeaturedPosts = () => {
       category: 'Digital Marketing',
       readTime: '8 min read',
       featured: true,
-      thumbnailUrl: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&h=675&q=80'
+      thumbnailUrl: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&h=675&q=80' // Business meeting/SEO strategy image
     },
   ];
 
