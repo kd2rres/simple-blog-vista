@@ -1,4 +1,3 @@
-
 import { useParams } from 'react-router-dom';
 import { Badge } from '@/components/ui/badge';
 import Newsletter from '@/components/blog/Newsletter';
@@ -178,7 +177,7 @@ const BlogPost = () => {
     category: 'Digital Marketing',
     readTime: '8 min read',
     author: {
-      name: 'Alex Morgan',
+      name: 'Kim Dave Torres',
       avatar: '/placeholder.svg',
       bio: 'Digital marketing specialist with 10+ years of experience helping businesses improve their online presence.'
     }
@@ -253,7 +252,13 @@ const BlogPost = () => {
               <Badge variant="outline" className="mb-2">Design</Badge>
               <h3 className="text-xl font-bold mb-2">The Evolution of Web Typography</h3>
               <p className="text-muted-foreground mb-4">From system fonts to variable fonts: exploring how web typography has changed the digital reading experience.</p>
-              <a href="#" className="text-primary font-medium hover:underline">Read Article</a>
+              <div className="flex items-center justify-between">
+                <a href="#" className="text-primary font-medium hover:underline">Read Article</a>
+                <div className="flex items-center">
+                  <div className="w-6 h-6 rounded-full bg-gray-200"></div>
+                  <span className="ml-2 text-xs text-muted-foreground">Kim Dave Torres</span>
+                </div>
+              </div>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <div className="mb-4 overflow-hidden rounded-md">
@@ -268,7 +273,13 @@ const BlogPost = () => {
               <Badge variant="outline" className="mb-2">Product</Badge>
               <h3 className="text-xl font-bold mb-2">Building Sustainable Digital Products</h3>
               <p className="text-muted-foreground mb-4">How to approach product design with sustainability in mind, reducing digital waste and environmental impact.</p>
-              <a href="#" className="text-primary font-medium hover:underline">Read Article</a>
+              <div className="flex items-center justify-between">
+                <a href="#" className="text-primary font-medium hover:underline">Read Article</a>
+                <div className="flex items-center">
+                  <div className="w-6 h-6 rounded-full bg-gray-200"></div>
+                  <span className="ml-2 text-xs text-muted-foreground">Kim Dave Torres</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>

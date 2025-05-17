@@ -54,7 +54,7 @@ const BlogCard = ({
           <div className="flex items-center">
             <div className="w-8 h-8 rounded-full bg-gray-200"></div>
             <div className="ml-2">
-              <p className="text-sm">Author Name</p>
+              <p className="text-sm">Kim Dave Torres</p>
               <p className="text-xs text-muted-foreground">{date}</p>
             </div>
           </div>
