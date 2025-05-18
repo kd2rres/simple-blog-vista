@@ -1,5 +1,6 @@
 
 import { Button } from '@/components/ui/button';
+import { Avatar } from '@/components/ui/avatar';
 
 const About = () => {
   return (
@@ -16,7 +17,13 @@ const About = () => {
       
       <section className="pb-16 md:pb-24">
         <div className="max-w-3xl mx-auto px-4 md:px-6">
-          <div className="aspect-[3/2] bg-gray-200 rounded-lg mb-12"></div>
+          <div className="rounded-lg overflow-hidden mb-12">
+            <img 
+              src="/lovable-uploads/45bb316b-c563-4e27-888b-509d2b5d6fd2.png" 
+              alt="Kim Dave Torres" 
+              className="w-full h-auto object-cover rounded-lg shadow-md"
+            />
+          </div>
           
           <div className="prose max-w-none">
             <p className="text-lg">
