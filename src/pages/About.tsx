@@ -1,3 +1,4 @@
+
 import { Button } from '@/components/ui/button';
 import { Avatar } from '@/components/ui/avatar';
 
@@ -21,6 +22,8 @@ const About = () => {
               src="/lovable-uploads/45bb316b-c563-4e27-888b-509d2b5d6fd2.png" 
               alt="Kim Dave Torres" 
               className="w-full h-auto object-cover rounded-lg shadow-md"
+              style={{ imageRendering: 'high-quality', maxWidth: '100%' }}
+              loading="eager"
             />
           </div>
           
