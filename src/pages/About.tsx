@@ -1,4 +1,3 @@
-
 import { Button } from '@/components/ui/button';
 import { Avatar } from '@/components/ui/avatar';
 
@@ -61,17 +60,12 @@ const About = () => {
                 <a href="mailto:torres.kim.dave@gmail.com">Contact Me</a>
               </Button>
               <Button variant="outline" asChild>
-                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-                  Twitter
-                </a>
-              </Button>
-              <Button variant="outline" asChild>
                 <a href="https://github.com/kd2rres" target="_blank" rel="noopener noreferrer">
                   GitHub
                 </a>
               </Button>
               <Button variant="outline" asChild>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.linkedin.com/in/kimdavetorres/" target="_blank" rel="noopener noreferrer">
                   LinkedIn
                 </a>
               </Button>
