@@ -58,11 +58,16 @@ const About = () => {
             
             <div className="flex flex-wrap gap-4 mt-8">
               <Button asChild>
-                <a href="mailto:hello@example.com">Contact Me</a>
+                <a href="mailto:torres.kim.dave@gmail.com">Contact Me</a>
               </Button>
               <Button variant="outline" asChild>
                 <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
                   Twitter
+                </a>
+              </Button>
+              <Button variant="outline" asChild>
+                <a href="https://github.com/kd2rres" target="_blank" rel="noopener noreferrer">
+                  GitHub
                 </a>
               </Button>
               <Button variant="outline" asChild>
