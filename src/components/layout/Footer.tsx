@@ -43,7 +43,7 @@ const Footer = () => {
               </li>
               <li>
                 <a 
-                  href="https://linkedin.com" 
+                  href="https://www.linkedin.com/in/kimdavetorres/" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="text-sm text-muted-foreground hover:text-foreground transition-colors flex items-center gap-2"
@@ -74,7 +74,7 @@ const Footer = () => {
               </a>
             </Button>
             <Button variant="ghost" size="sm" asChild className="h-8 w-8 p-0">
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <a href="https://www.linkedin.com/in/kimdavetorres/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                 <Linkedin className="h-4 w-4" />
               </a>
             </Button>
