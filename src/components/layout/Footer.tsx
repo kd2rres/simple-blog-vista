@@ -1,5 +1,7 @@
 
 import { Link } from 'react-router-dom';
+import { Github, Mail, Linkedin } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -29,20 +31,58 @@ const Footer = () => {
           <div>
             <h4 className="font-medium text-sm mb-4">Connect</h4>
             <ul className="space-y-2">
-              <li><a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Twitter</a></li>
-              <li><a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-foreground transition-colors">GitHub</a></li>
-              <li><a href="mailto:hello@example.com" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Contact</a></li>
+              <li>
+                <a 
+                  href="https://github.com/kd2rres" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-sm text-muted-foreground hover:text-foreground transition-colors flex items-center gap-2"
+                >
+                  <Github className="h-4 w-4" /> GitHub
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="https://linkedin.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-sm text-muted-foreground hover:text-foreground transition-colors flex items-center gap-2"
+                >
+                  <Linkedin className="h-4 w-4" /> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="mailto:torres.kim.dave@gmail.com" 
+                  className="text-sm text-muted-foreground hover:text-foreground transition-colors flex items-center gap-2"
+                >
+                  <Mail className="h-4 w-4" /> Contact
+                </a>
+              </li>
             </ul>
           </div>
         </div>
         
-        <div className="border-t mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-sm text-muted-foreground">
+        <div className="mt-12 pt-8 border-t flex flex-col sm:flex-row items-center justify-between">
+          <p className="text-sm text-muted-foreground mb-4 sm:mb-0">
             © {currentYear} MinimalBlog. All rights reserved.
           </p>
-          <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Privacy</a>
-            <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Terms</a>
+          <div className="flex gap-2">
+            <Button variant="ghost" size="sm" asChild className="h-8 w-8 p-0">
+              <a href="https://github.com/kd2rres" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <Github className="h-4 w-4" />
+              </a>
+            </Button>
+            <Button variant="ghost" size="sm" asChild className="h-8 w-8 p-0">
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <Linkedin className="h-4 w-4" />
+              </a>
+            </Button>
+            <Button variant="ghost" size="sm" asChild className="h-8 w-8 p-0">
+              <a href="mailto:torres.kim.dave@gmail.com" aria-label="Email">
+                <Mail className="h-4 w-4" />
+              </a>
+            </Button>
           </div>
         </div>
       </div>
